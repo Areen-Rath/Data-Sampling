@@ -12,7 +12,7 @@ print(population_mean)
 def find_sample_mean():
     dataset = []
     for i in range(0, 30):
-        index = random.randint(0, len(time))
+        index = random.randint(0, len(time) - 1)
         value = time[index]
         dataset.append(value)
 
@@ -26,8 +26,8 @@ def setup():
         mean_array = find_sample_mean()
         sample_mean_array.append(mean_array)
 
-    sample_mean_array_mean = statistics.mean(sample_mean_array)
-    print(sample_mean_array_mean)
+    mean = statistics.mean(sample_mean_array)
+    print(mean)
 
 def plot_graph():
     data = sample_mean_array
